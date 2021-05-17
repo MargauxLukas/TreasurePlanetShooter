@@ -6,7 +6,7 @@ public class PickableObject : MonoBehaviour
 {
     protected virtual void ApplyEffect()
     {
-
+        Debug.Log("Collected !");
     }
 
     private void OnTriggerEnter2D(Collider2D collision)

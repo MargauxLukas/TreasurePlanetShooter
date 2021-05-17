@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class ShipController : MonoBehaviour
 {
-    //On the Scriptable
+    [SerializeField]
     private float acceleration = 0.02f, maxSpeed = .1f;
 
     [SerializeField]
@@ -20,10 +20,13 @@ public class ShipController : MonoBehaviour
 
     public ShipPlaytimeStatue currentStatue;
 
-    /*private void Start()
+    private float ultiCharge;
+
+
+    private void Start()
     {
         GetComponent<SpriteRenderer>().sprite = currentStatue.baseShip.shipSprite;
-    }*/
+    }
 
     // Update is called once per frame
     void FixedUpdate()
@@ -65,12 +68,15 @@ public class ShipController : MonoBehaviour
         {
             currentStatue.TryToShoot();
         }
+        if(Input.GetMouseButtonDown(1) && ultiCharge >= 100)
+        {
+            UseUlti();
+        }
+
     }
 
-    /*private void OnCollisionEnter2D(Collision2D collision)
+    private void UseUlti()
     {
-        inertieDirection /= 10;
-        Debug.Log("Collis");
-        currentStatue.TakeDamage(10, 0, false);
-    }*/
+
+    }
 }

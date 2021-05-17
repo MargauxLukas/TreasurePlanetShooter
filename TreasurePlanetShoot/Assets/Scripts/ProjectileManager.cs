@@ -62,6 +62,8 @@ public class ProjectileManager : MonoBehaviour
         {
             List<Vector2> newTargets = ProjectileDirections(shooter.weapon.projectileByBurst, shooter.weapon.angleBeetwenProjectile, shooter.shotDirection);
 
+            Debug.Log(newTargets[0]);
+
             for (int j = 0; j < newTargets.Count; j++)
             {
                 for (int i = 0; i < allProjectiles.Count; i++)

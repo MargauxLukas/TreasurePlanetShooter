@@ -24,6 +24,7 @@ public class ShipPlaytimeStatue : MonoBehaviour
 
     private void Start()
     {
+        shotDirection = new Vector2(-1, 0);
         ResetValue();
     }
 
@@ -53,7 +54,7 @@ public class ShipPlaytimeStatue : MonoBehaviour
                 invulnerabilityLeft = 2;
             }
 
-            Debug.Log("TakeDmg");
+            Debug.Log("TakeDmg : " + health);
             health -= dmg;
             if (health <= 0)
             {
@@ -61,7 +62,7 @@ public class ShipPlaytimeStatue : MonoBehaviour
             }
             if (healthBar != null)
             {
-                healthBar.fillAmount = (maxHealth - health) / maxHealth;
+                healthBar.fillAmount = health / maxHealth;
             }
             return true;
         }

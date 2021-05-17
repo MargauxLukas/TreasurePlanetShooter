@@ -10,11 +10,14 @@ public class EnemyBehavior : MonoBehaviour
     [SerializeField]
     private ShipPlaytimeStatue playtimeStatue = default;
 
-    [SerializeField]
     private int wayIndex = 0;
 
-    [SerializeField]
     private Vector3 localPos = Vector3.zero, direction = Vector3.zero, nextTarget = Vector3.zero;
+
+    private void OnEnable()
+    {
+        SetEnnemy(playtimeStatue.baseShip);
+    }
 
     public void SetEnnemy(Ship newStatue)
     {
@@ -36,24 +39,21 @@ public class EnemyBehavior : MonoBehaviour
 
     private void Update()
     {
-        if (transform.position.x < 8.5f)
+        if (Vector2.Distance(localPos, nextTarget) < 0.1f)
         {
-            if (Vector2.Distance(localPos, nextTarget) < 0.1f)
-            {
-                wayIndex++;
-                wayIndex %= baseStatue.wayPoints.Count;
-                nextTarget = baseStatue.wayPoints[wayIndex];
-            }
+            wayIndex++;
+            wayIndex %= baseStatue.wayPoints.Count;
+            nextTarget = baseStatue.wayPoints[wayIndex];
+        }
 
-            direction = (nextTarget - localPos).normalized;
+        direction = (nextTarget - localPos).normalized;
 
-            localPos += direction * baseStatue.speed * Time.deltaTime;
+        localPos += direction * baseStatue.speed * Time.deltaTime;
 
-            transform.position += direction * baseStatue.speed * Time.deltaTime;
-            if (playtimeStatue.IsCooldownReady())
-            {
-                playtimeStatue.TryToShoot();
-            }
+        transform.position += direction * baseStatue.speed * Time.deltaTime;
+        if (transform.position.x < 8.2f)
+        {
+            playtimeStatue.TryToShoot();
         }
     }
 }
