@@ -8,6 +8,6 @@ public class Weapon : ScriptableObject
     public string nom;
     public Sprite projectileSprite;
 
-    public float recoveryTime, projectileSpeed, damage, damageByDifficulty, burstDelay;
+    public float recoveryTime, projectileSpeed, damage, burstDelay;
     public int burstNumber, projectileByBurst, angleBeetwenProjectile;
 }

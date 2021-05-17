@@ -8,7 +8,7 @@ public class MovableProjectile : MonoBehaviour
     private float speed = 5;
 
     private bool isEnnemy = true;
-    private float damage = 1, bonusDamage;
+    private float damage = 1;
 
     private Vector3 startPos;
 
@@ -29,7 +29,6 @@ public class MovableProjectile : MonoBehaviour
         transform.position = shooter.transform.position;
         isEnnemy = !shooter.isPlayer;
         damage = newWeapon.damage;
-        bonusDamage = newWeapon.damageByDifficulty;
 
         transform.up = direction;
         gameObject.SetActive(true);
@@ -57,7 +56,7 @@ public class MovableProjectile : MonoBehaviour
     {
         if (collision.GetComponent<ShipPlaytimeStatue>() != null)
         {
-            if (collision.GetComponent<ShipPlaytimeStatue>().TakeDamage(damage, bonusDamage, isEnnemy))
+            if (collision.GetComponent<ShipPlaytimeStatue>().TakeDamage(damage, isEnnemy))
             {
                 DestroyLazer();
             }

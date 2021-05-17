@@ -20,6 +20,8 @@ public class ShipPlaytimeStatue : MonoBehaviour
     [SerializeField]
     private Image healthBar = default;
 
+    float invulnerabilityLeft = 0;
+
     private void Start()
     {
         ResetValue();
@@ -36,14 +38,23 @@ public class ShipPlaytimeStatue : MonoBehaviour
     private void Update()
     {
         currentCooldown += Time.deltaTime;
+        if(invulnerabilityLeft > 0)
+        {
+            invulnerabilityLeft -= Time.deltaTime;
+        }
     }
 
-    public bool TakeDamage(float dmg, float bonusDamage, bool isAlly)
+    public bool TakeDamage(float dmg, bool isAlly)
     {
-        if (isAlly == isPlayer)
+        if (isAlly == isPlayer && invulnerabilityLeft <= 0)
         {
+            if(isPlayer)
+            {
+                invulnerabilityLeft = 2;
+            }
+
             Debug.Log("TakeDmg");
-            health -= dmg + bonusDamage;// * T_ScoreManager.instance.currentDifficulty;
+            health -= dmg;
             if (health <= 0)
             {
                 Die();
