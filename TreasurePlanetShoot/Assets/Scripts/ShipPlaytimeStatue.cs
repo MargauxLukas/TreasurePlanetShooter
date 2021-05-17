@@ -5,15 +5,15 @@ using UnityEngine.UI;
 
 public class ShipPlaytimeStatue : MonoBehaviour
 {
-    /*private float health, maxHealth;
+    private float health, maxHealth = 50;
     public bool isPlayer;
 
     [HideInInspector]
     public Vector2 shotDirection;
 
-    public T_EnnemyScriptable baseShip;
-    [HideInInspector]
-    public T_WeaponScriptable weapon;
+    //public T_EnnemyScriptable baseShip;
+    /*[HideInInspector]
+    public T_WeaponScriptable weapon;*/
 
     private float currentCooldown;
 
@@ -27,10 +27,10 @@ public class ShipPlaytimeStatue : MonoBehaviour
 
     public void ResetValue()
     {
-        maxHealth = baseShip.hitPoints;
+        //maxHealth = baseShip.hitPoints;
         health = maxHealth;
-        weapon = baseShip.weapon;
-        currentCooldown = weapon.recoveryTime;
+        //weapon = baseShip.weapon;
+        //currentCooldown = weapon.recoveryTime;
     }
 
     private void Update()
@@ -43,7 +43,8 @@ public class ShipPlaytimeStatue : MonoBehaviour
     {
         if (isAlly == isPlayer)
         {
-            health -= dmg + bonusDamage * T_ScoreManager.instance.currentDifficulty;
+            Debug.Log("TakeDmg");
+            health -= dmg + bonusDamage;// * T_ScoreManager.instance.currentDifficulty;
             if (health <= 0)
             {
                 Die();
@@ -59,7 +60,7 @@ public class ShipPlaytimeStatue : MonoBehaviour
 
     private void Die()
     {
-        if (isPlayer)
+        /*if (isPlayer)
         {
             T_ScoreManager.instance.EndGame();
         }
@@ -68,20 +69,20 @@ public class ShipPlaytimeStatue : MonoBehaviour
             T_DialogueSimulation.instance.ShowMessage();
             T_ScoreManager.instance.AddScore(baseShip.score, baseShip.difficultyScore);
             gameObject.SetActive(false);
-        }
+        }*/
     }
 
     public void TryToShoot()
     {
-        if (currentCooldown >= weapon.recoveryTime)
+        /*if (currentCooldown >= weapon.recoveryTime)
         {
-            T_ShootManager.Shoot(this);
+            //T_ShootManager.Shoot(this);
             currentCooldown = 0;
-        }
+        }*/
     }
 
     public bool IsCooldownReady()
     {
-        return (currentCooldown >= weapon.recoveryTime);
-    }*/
+        return true;// (currentCooldown >= weapon.recoveryTime);
+    }
 }
