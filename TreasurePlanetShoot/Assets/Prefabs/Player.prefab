@@ -11,6 +11,9 @@ GameObject:
   - component: {fileID: 512681268843890938}
   - component: {fileID: 512681268843890936}
   - component: {fileID: 512681268843890937}
+  - component: {fileID: 8900075385739386795}
+  - component: {fileID: 5697455716407048017}
+  - component: {fileID: 2748099484565860721}
   m_Layer: 0
   m_Name: Ally
   m_TagString: Untagged
@@ -96,7 +99,72 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   rotationSpeed: 10
-  allyWeapon: {fileID: 11400000, guid: 8903af75065b01749a6db144210d4db4, type: 2}
+  statue: {fileID: 8900075385739386795}
+--- !u!114 &8900075385739386795
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512681268843890939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 8b8f639b8231dff429723a54a5b7a94d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  isPlayer: 1
+  isAlly: 1
+  shotDirection: {x: 1, y: 0}
+  baseShip: {fileID: 11400000, guid: c0867ac8735c5de40a55d9ee031425c9, type: 2}
+  weapon: {fileID: 0}
+  healthBar: {fileID: 0}
+--- !u!61 &5697455716407048017
+BoxCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512681268843890939}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0, y: 0}
+  m_SpriteTilingProperty:
+    border: {x: 0.049999997, y: 0.049999997, z: 0.049999997, w: 0.049999997}
+    pivot: {x: 0.5, y: 0.5}
+    oldSize: {x: 0.16, y: 0.16}
+    newSize: {x: 0.16, y: 0.16}
+    adaptiveTilingThreshold: 0.5
+    drawMode: 0
+    adaptiveTiling: 0
+  m_AutoTiling: 0
+  serializedVersion: 2
+  m_Size: {x: 0.2, y: 0.2}
+  m_EdgeRadius: 0
+--- !u!50 &2748099484565860721
+Rigidbody2D:
+  serializedVersion: 4
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 512681268843890939}
+  m_BodyType: 1
+  m_Simulated: 1
+  m_UseFullKinematicContacts: 0
+  m_UseAutoMass: 0
+  m_Mass: 1
+  m_LinearDrag: 0
+  m_AngularDrag: 0.05
+  m_GravityScale: 1
+  m_Material: {fileID: 0}
+  m_Interpolate: 0
+  m_SleepingMode: 1
+  m_CollisionDetection: 0
+  m_Constraints: 0
 --- !u!1 &512681269303350559
 GameObject:
   m_ObjectHideFlags: 0
@@ -197,6 +265,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6087d58db92648a4c8f82fae3f6aaae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  acceleration: 0.02
+  maxSpeed: 0.1
   canon: {fileID: 512681269601546933}
   cam: {fileID: 0}
   currentStatue: {fileID: 512681269303350529}
@@ -213,6 +283,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 1
+  isAlly: 0
   shotDirection: {x: 0, y: 0}
   baseShip: {fileID: 11400000, guid: 8c865d567e5085d4ea0e336ba6b1a870, type: 2}
   weapon: {fileID: 0}

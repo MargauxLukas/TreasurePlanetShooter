@@ -7,8 +7,8 @@ public class ShipPlaytimeStatue : MonoBehaviour
 {
     private float health, maxHealth = 50;
     public bool isPlayer;
+    public bool isAlly;
 
-    [HideInInspector]
     public Vector2 shotDirection;
 
     public Ship baseShip;
@@ -24,7 +24,6 @@ public class ShipPlaytimeStatue : MonoBehaviour
 
     private void Start()
     {
-        shotDirection = new Vector2(-1, 0);
         ResetValue();
     }
 
@@ -45,9 +44,9 @@ public class ShipPlaytimeStatue : MonoBehaviour
         }
     }
 
-    public bool TakeDamage(float dmg, bool isAlly)
+    public bool TakeDamage(float dmg, bool isPlayerProjectile)
     {
-        if (isAlly == isPlayer && invulnerabilityLeft <= 0)
+        if (!isAlly && isPlayerProjectile == isPlayer && invulnerabilityLeft <= 0)
         {
             if(isPlayer)
             {
@@ -66,7 +65,7 @@ public class ShipPlaytimeStatue : MonoBehaviour
             }
             return true;
         }
-        return false;
+        return isAlly;
     }
 
     private void Die()

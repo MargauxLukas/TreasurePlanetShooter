@@ -10,7 +10,6 @@ public class ShipController : MonoBehaviour
     [SerializeField]
     private GameObject canon;
 
-    //On the GO
     private Vector2 newShotDirection;
     private Vector3 moveDirection, inertieDirection, nextPosition;
     [SerializeField]

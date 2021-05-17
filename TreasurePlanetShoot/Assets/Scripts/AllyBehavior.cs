@@ -10,7 +10,7 @@ public class AllyBehavior : MonoBehaviour
     private float rotationSpeed = 10;
 
     [SerializeField]
-    private Weapon allyWeapon;
+    private ShipPlaytimeStatue statue;
 
     private float currentCooldown;
 
@@ -22,11 +22,7 @@ public class AllyBehavior : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        currentCooldown += Time.deltaTime;
-        if(currentCooldown>=allyWeapon.recoveryTime)
-        {
-            
-        }
+        statue.TryToShoot();
 
         transform.RotateAround(player.position, new Vector3(0, 0, 1), rotationSpeed * Time.deltaTime);
         transform.right = new Vector3(0, 1, 0);

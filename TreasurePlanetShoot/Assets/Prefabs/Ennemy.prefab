@@ -159,7 +159,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   isPlayer: 0
-  shotDirection: {x: 0, y: 0}
+  isAlly: 0
+  shotDirection: {x: -1, y: 0}
   baseShip: {fileID: 11400000, guid: 684a8baa48638b94a8f9ddf287c1f6ff, type: 2}
   weapon: {fileID: 0}
   healthBar: {fileID: 0}
