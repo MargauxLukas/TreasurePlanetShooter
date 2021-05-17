@@ -11,9 +11,9 @@ public class ShipPlaytimeStatue : MonoBehaviour
     [HideInInspector]
     public Vector2 shotDirection;
 
-    //public T_EnnemyScriptable baseShip;
-    /*[HideInInspector]
-    public T_WeaponScriptable weapon;*/
+    public Ship baseShip;
+    [HideInInspector]
+    public Weapon weapon;
 
     private float currentCooldown;
 
@@ -27,16 +27,15 @@ public class ShipPlaytimeStatue : MonoBehaviour
 
     public void ResetValue()
     {
-        //maxHealth = baseShip.hitPoints;
+        maxHealth = baseShip.hitPoints;
         health = maxHealth;
-        //weapon = baseShip.weapon;
-        //currentCooldown = weapon.recoveryTime;
+        weapon = baseShip.weapon;
+        currentCooldown = weapon.recoveryTime;
     }
 
     private void Update()
     {
         currentCooldown += Time.deltaTime;
-        shotDirection = transform.up.normalized;
     }
 
     public bool TakeDamage(float dmg, float bonusDamage, bool isAlly)
@@ -60,29 +59,28 @@ public class ShipPlaytimeStatue : MonoBehaviour
 
     private void Die()
     {
-        /*if (isPlayer)
+        if (isPlayer)
         {
-            T_ScoreManager.instance.EndGame();
+            //T_ScoreManager.instance.EndGame();
         }
         else
         {
-            T_DialogueSimulation.instance.ShowMessage();
-            T_ScoreManager.instance.AddScore(baseShip.score, baseShip.difficultyScore);
+            //T_ScoreManager.instance.AddScore(baseShip.score, baseShip.difficultyScore);
             gameObject.SetActive(false);
-        }*/
+        }
     }
 
     public void TryToShoot()
     {
-        /*if (currentCooldown >= weapon.recoveryTime)
+        if (currentCooldown >= weapon.recoveryTime)
         {
-            //T_ShootManager.Shoot(this);
+            ProjectileManager.Shoot(this);
             currentCooldown = 0;
-        }*/
+        }
     }
 
     public bool IsCooldownReady()
     {
-        return true;// (currentCooldown >= weapon.recoveryTime);
+        return (currentCooldown >= weapon.recoveryTime);
     }
 }

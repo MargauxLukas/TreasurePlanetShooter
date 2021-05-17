@@ -11,8 +11,6 @@ public class ShipController : MonoBehaviour
     private GameObject canon;
 
     //On the GO
-    [HideInInspector]
-    public Vector2 shotDirection;
     private Vector2 newShotDirection;
     private Vector3 moveDirection, inertieDirection, nextPosition;
     [SerializeField]
@@ -59,8 +57,8 @@ public class ShipController : MonoBehaviour
         newShotDirection = (cam.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;
         if(Vector2.Angle(newShotDirection, transform.up) < 75 && Vector2.Angle(newShotDirection, transform.up) > -75)
         {
-            shotDirection = newShotDirection;
-            canon.transform.up = shotDirection;
+            currentStatue.shotDirection = newShotDirection;
+            canon.transform.up = newShotDirection;
         }
 
         if (Input.GetMouseButton(0))
@@ -69,10 +67,10 @@ public class ShipController : MonoBehaviour
         }
     }
 
-    private void OnCollisionEnter2D(Collision2D collision)
+    /*private void OnCollisionEnter2D(Collision2D collision)
     {
         inertieDirection /= 10;
         Debug.Log("Collis");
         currentStatue.TakeDamage(10, 0, false);
-    }
+    }*/
 }
