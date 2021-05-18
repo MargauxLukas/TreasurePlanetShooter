@@ -12,9 +12,9 @@ GameObject:
   - component: {fileID: 7304122513724434968}
   - component: {fileID: 7304122513724434969}
   - component: {fileID: 7304122513724434970}
-  - component: {fileID: 7304122513724434971}
+  - component: {fileID: -2130949225003538042}
   m_Layer: 0
-  m_Name: Collectible
+  m_Name: Collectible Score
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -132,7 +132,7 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
---- !u!114 &7304122513724434971
+--- !u!114 &-2130949225003538042
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -141,6 +141,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 7304122513724434964}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: a25d792691199174297be22f879eef39, type: 3}
+  m_Script: {fileID: 11500000, guid: 7bf9c82d9fe361c43b07f141ad1c0a3c, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 

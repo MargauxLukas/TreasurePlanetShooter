@@ -6,6 +6,6 @@ public class PickableScoreIncrement : PickableObject
 {
     protected override void ApplyEffect(ShipPlaytimeStatue ship)
     {
-        
+        ScoreManager.AddScore(5);
     }
 }
