@@ -11,7 +11,7 @@ public class PickableObject : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<ShipPlaytimeStatue>() != null && collision.GetComponent<ShipPlaytimeStatue>().isPlayer)
+        if (collision.GetComponent<ShipPlaytimeStatue>() != null && collision.GetComponent<ShipPlaytimeStatue>().isPlayer && !collision.GetComponent<ShipPlaytimeStatue>().isAlly)
         {
             ApplyEffect(collision.GetComponent<ShipPlaytimeStatue>());
             gameObject.SetActive(false);

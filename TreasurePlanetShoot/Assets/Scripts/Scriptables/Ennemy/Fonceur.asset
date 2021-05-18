@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fonceur
   m_EditorClassIdentifier: 
   nom: Fonceur
-  shipSprite: {fileID: 21300000, guid: 099687c6d0b556f4b97f1eee78b7fbe9, type: 3}
+  shipSprite: {fileID: 21300000, guid: d52fe60d72af8194e94c26bc9eea683e, type: 3}
   hitPoints: 1
   weapon: {fileID: 11400000, guid: 03b3be2d78e97eb47ab5019bfeab07e8, type: 2}
   speed: 1

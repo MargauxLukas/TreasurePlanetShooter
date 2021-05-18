@@ -27,7 +27,15 @@ public class MovableProjectile : MonoBehaviour
         sprite.sprite = newWeapon.projectileSprite;
         direction = lazerDirection;
         speed = newWeapon.projectileSpeed;
-        transform.position = shooter.transform.position;
+
+        if (shooter.isPlayer && shooter.isAlly)
+        {
+            transform.position = shooter.gameObject.GetComponent<ShipController>().canon.transform.position;
+        }
+        else
+        {
+            transform.position = shooter.transform.position;
+        }
         isEnnemy = !shooter.isPlayer;
         damage = newWeapon.damage;
 

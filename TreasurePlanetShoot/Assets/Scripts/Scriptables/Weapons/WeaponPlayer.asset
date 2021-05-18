@@ -18,6 +18,6 @@ MonoBehaviour:
   projectileSpeed: 20
   damage: 3
   burstDelay: 0.1
-  burstNumber: 1
+  burstNumber: 4
   projectileByBurst: 1
   angleBeetwenProjectile: 0

@@ -13,10 +13,9 @@ MonoBehaviour:
   m_Name: ShipTest
   m_EditorClassIdentifier: 
   nom: TestShip
-  shipSprite: {fileID: 21300000, guid: 37fdbd9d341c3094b98fc475e55376e2, type: 3}
+  shipSprite: {fileID: 21300000, guid: 1257038e09c73db4fa0ca58406aff7ea, type: 3}
   hitPoints: 3
   weapon: {fileID: 11400000, guid: 8903af75065b01749a6db144210d4db4, type: 2}
   speed: 1
-  score: 0
-  difficultyScore: 0
+  dropOnDeath: {fileID: 0}
   wayPoints: []

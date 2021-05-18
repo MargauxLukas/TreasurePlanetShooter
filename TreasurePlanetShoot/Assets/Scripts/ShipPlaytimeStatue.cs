@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ShipPlaytimeStatue : MonoBehaviour
 {
+    [SerializeField]
     private float health, maxHealth = 50;
     public bool isPlayer;
     public bool isAlly;
@@ -16,7 +17,7 @@ public class ShipPlaytimeStatue : MonoBehaviour
     public Weapon weapon;
 
     private float currentCooldown;
-    private float currentUltiCharge = 1;
+    private float currentUltiCharge = 0;
 
     [SerializeField]
     private Image healthBar, ultiBar;
@@ -30,6 +31,7 @@ public class ShipPlaytimeStatue : MonoBehaviour
 
     public void ResetValue()
     {
+        GetComponent<SpriteRenderer>().sprite = baseShip.shipSprite;
         maxHealth = baseShip.hitPoints;
         health = maxHealth;
         weapon = baseShip.weapon;
@@ -52,6 +54,7 @@ public class ShipPlaytimeStatue : MonoBehaviour
             if(isPlayer)
             {
                 invulnerabilityLeft = 2;
+                GetComponent<Animator>().Play("PlayerInvulnerabilityFeedback");
             }
             if (health > 0)
             {
@@ -115,8 +118,12 @@ public class ShipPlaytimeStatue : MonoBehaviour
 
     public void AddUltiCharge(float value)
     {
+        if(currentUltiCharge < 1 && currentUltiCharge+value >= 1)
+        {
+            GetComponent<Animator>().Play("UltiUp");
+        }
         currentUltiCharge += value;
-        if(currentUltiCharge > 1)
+        if(currentUltiCharge >= 1)
         {
             currentUltiCharge = 1;
         }

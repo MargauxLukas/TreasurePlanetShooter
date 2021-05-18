@@ -104,7 +104,7 @@ public class ProjectileManager : MonoBehaviour
             {
                 vecToAdd = Quaternion.Euler(0, 0, -angle * (int)(i / 2)) * projectiles[0];
             }
-            projectiles.Add(vecToAdd);
+            projectiles.Add(vecToAdd.normalized);
         }
 
         return new List<Vector2>(projectiles);
