@@ -43,4 +43,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8dcf68ffd073f2f4bbe86e55a223af0d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  coef: 1
+  coef: 2
