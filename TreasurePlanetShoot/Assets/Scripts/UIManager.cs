@@ -13,6 +13,6 @@ public class UIManager : MonoBehaviour
 
     public void EndLevel()
     {
-
+        Debug.Log("EndGame");
     }
 }

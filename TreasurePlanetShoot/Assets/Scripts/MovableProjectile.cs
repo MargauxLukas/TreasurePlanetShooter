@@ -7,6 +7,7 @@ public class MovableProjectile : MonoBehaviour
     private Vector3 direction;
     private float speed = 5;
 
+    [SerializeField]
     private bool isEnnemy = true;
     private float damage = 1;
 
@@ -54,16 +55,12 @@ public class MovableProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<ShipPlaytimeStatue>() != null)
+        if (collision.GetComponent<ShipPlaytimeStatue>() != null && collision.GetComponent<ShipPlaytimeStatue>().isPlayer != isEnnemy)
         {
             if (collision.GetComponent<ShipPlaytimeStatue>().TakeDamage(damage, isEnnemy))
             {
-                DestroyLazer();
+                GetComponent<Animator>().Play("ProjectileExplosion");
             }
-        }
-        else if (collision.tag == "Obstacle" || collision.tag == "MapBorder")
-        {
-            DestroyLazer();
         }
     }
 }

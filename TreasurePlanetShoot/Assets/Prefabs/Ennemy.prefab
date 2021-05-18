@@ -14,6 +14,7 @@ GameObject:
   - component: {fileID: 81681028038678480}
   - component: {fileID: 81681028038678493}
   - component: {fileID: 81681028038678492}
+  - component: {fileID: 3370484038815145723}
   m_Layer: 0
   m_Name: Ennemy
   m_TagString: Untagged
@@ -164,3 +165,15 @@ MonoBehaviour:
   baseShip: {fileID: 11400000, guid: 684a8baa48638b94a8f9ddf287c1f6ff, type: 2}
   weapon: {fileID: 0}
   healthBar: {fileID: 0}
+--- !u!114 &3370484038815145723
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 81681028038678487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 6855e5485d1a7ad49b4b7f3dd308912c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 

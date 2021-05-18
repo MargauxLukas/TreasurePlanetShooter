@@ -20,5 +20,5 @@ MonoBehaviour:
   score: 0
   difficultyScore: 0
   wayPoints:
-  - {x: 0, y: 2}
+  - {x: 0, y: 0}
   - {x: 0, y: -2}

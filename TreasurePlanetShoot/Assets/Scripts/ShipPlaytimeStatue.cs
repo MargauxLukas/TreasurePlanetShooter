@@ -46,14 +46,13 @@ public class ShipPlaytimeStatue : MonoBehaviour
 
     public bool TakeDamage(float dmg, bool isPlayerProjectile)
     {
-        if (!isAlly && isPlayerProjectile == isPlayer && invulnerabilityLeft <= 0)
+        if (!isAlly && isPlayerProjectile != isPlayer && invulnerabilityLeft <= 0)
         {
             if(isPlayer)
             {
                 invulnerabilityLeft = 2;
             }
 
-            Debug.Log("TakeDmg : " + health);
             health -= dmg;
             if (health <= 0)
             {

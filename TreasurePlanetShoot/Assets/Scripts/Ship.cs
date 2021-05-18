@@ -13,4 +13,6 @@ public class Ship : ScriptableObject
     public int score, difficultyScore;
 
     public List<Vector2> wayPoints = new List<Vector2>();
+
+
 }

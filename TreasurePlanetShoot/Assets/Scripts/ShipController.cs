@@ -20,6 +20,8 @@ public class ShipController : MonoBehaviour
     public ShipPlaytimeStatue currentStatue;
 
     private float ultiCharge;
+    [SerializeField]
+    private GameObject ultiGo;
 
 
     private void Start()
@@ -76,6 +78,14 @@ public class ShipController : MonoBehaviour
 
     private void UseUlti()
     {
+        ultiCharge = 0;
+        StartCoroutine(UsingUlti());
+    }
 
+    IEnumerator UsingUlti()
+    {
+        ultiGo.SetActive(true);
+        yield return new WaitForSeconds(2f);
+        ultiGo.SetActive(false);
     }
 }

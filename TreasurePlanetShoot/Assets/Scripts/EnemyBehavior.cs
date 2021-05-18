@@ -39,21 +39,24 @@ public class EnemyBehavior : MonoBehaviour
 
     private void Update()
     {
-        if (Vector2.Distance(localPos, nextTarget) < 0.1f)
+        if (transform.position.x < 8.5f)
         {
-            wayIndex++;
-            wayIndex %= baseStatue.wayPoints.Count;
-            nextTarget = baseStatue.wayPoints[wayIndex];
-        }
+            if (Vector2.Distance(localPos, nextTarget) < 0.1f)
+            {
+                wayIndex++;
+                wayIndex %= baseStatue.wayPoints.Count;
+                nextTarget = baseStatue.wayPoints[wayIndex];
+            }
 
-        direction = (nextTarget - localPos).normalized;
+            direction = (nextTarget - localPos).normalized;
 
-        localPos += direction * baseStatue.speed * Time.deltaTime;
+            localPos += direction * baseStatue.speed * Time.deltaTime;
 
-        transform.position += direction * baseStatue.speed * Time.deltaTime;
-        if (transform.position.x < 8.2f)
-        {
-            playtimeStatue.TryToShoot();
+            transform.position += direction * baseStatue.speed * Time.deltaTime;
+            if (transform.position.x < 8.2f)
+            {
+                playtimeStatue.TryToShoot();
+            }
         }
     }
 }
