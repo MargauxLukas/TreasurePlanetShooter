@@ -55,7 +55,7 @@ public class MovableProjectile : MonoBehaviour
 
     private void OnTriggerEnter2D(Collider2D collision)
     {
-        if (collision.GetComponent<ShipPlaytimeStatue>() != null && collision.GetComponent<ShipPlaytimeStatue>().isPlayer != isEnnemy)
+        if (collision.GetComponent<ShipPlaytimeStatue>() != null)
         {
             if (collision.GetComponent<ShipPlaytimeStatue>().TakeDamage(damage, isEnnemy))
             {

@@ -19,7 +19,6 @@ public class ShipController : MonoBehaviour
 
     public ShipPlaytimeStatue currentStatue;
 
-    private float ultiCharge;
     [SerializeField]
     private GameObject ultiGo;
 
@@ -69,7 +68,7 @@ public class ShipController : MonoBehaviour
         {
             currentStatue.TryToShoot();
         }
-        if(Input.GetMouseButtonDown(1) && ultiCharge >= 100)
+        if(Input.GetMouseButtonDown(1) && currentStatue.CanUseUlti())
         {
             UseUlti();
         }
@@ -78,7 +77,7 @@ public class ShipController : MonoBehaviour
 
     private void UseUlti()
     {
-        ultiCharge = 0;
+        currentStatue.UseUlti();
         StartCoroutine(UsingUlti());
     }
 

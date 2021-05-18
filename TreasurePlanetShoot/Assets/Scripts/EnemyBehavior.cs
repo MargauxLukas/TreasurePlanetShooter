@@ -39,8 +39,17 @@ public class EnemyBehavior : MonoBehaviour
 
     private void Update()
     {
-        if (transform.position.x < 8.5f)
+        if (transform.position.x < -8.5f)
         {
+            gameObject.SetActive(false);
+        }
+        else if (transform.position.x < 8.5f)
+        {
+            if(!GetComponent<BoxCollider2D>().enabled)
+            {
+                GetComponent<BoxCollider2D>().enabled = true;
+            }
+
             if (Vector2.Distance(localPos, nextTarget) < 0.1f)
             {
                 wayIndex++;

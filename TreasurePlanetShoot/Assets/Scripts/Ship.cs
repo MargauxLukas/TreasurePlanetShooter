@@ -10,7 +10,7 @@ public class Ship : ScriptableObject
     public int hitPoints;
     public Weapon weapon;
     public float speed;
-    public int score, difficultyScore;
+    public GameObject dropOnDeath;
 
     public List<Vector2> wayPoints = new List<Vector2>();
 

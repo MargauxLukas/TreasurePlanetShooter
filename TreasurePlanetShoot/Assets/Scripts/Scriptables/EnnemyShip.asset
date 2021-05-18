@@ -17,8 +17,7 @@ MonoBehaviour:
   hitPoints: 1
   weapon: {fileID: 11400000, guid: 8903af75065b01749a6db144210d4db4, type: 2}
   speed: 3
-  score: 0
-  difficultyScore: 0
+  dropOnDeath: {fileID: 7088004812870285432, guid: 8d804a3500edb004997ceb78ddeadd8a, type: 3}
   wayPoints:
   - {x: 0, y: 0}
   - {x: 0, y: -2}

@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PickableObject : MonoBehaviour
 {
-    protected virtual void ApplyEffect()
+    protected virtual void ApplyEffect(ShipPlaytimeStatue ship)
     {
         Debug.Log("Collected !");
     }
@@ -13,7 +13,7 @@ public class PickableObject : MonoBehaviour
     {
         if (collision.GetComponent<ShipPlaytimeStatue>() != null && collision.GetComponent<ShipPlaytimeStatue>().isPlayer)
         {
-            ApplyEffect();
+            ApplyEffect(collision.GetComponent<ShipPlaytimeStatue>());
             gameObject.SetActive(false);
         }
     }
