@@ -16,7 +16,7 @@ public class ShipPlaytimeStatue : MonoBehaviour
     public Weapon weapon;
 
     private float currentCooldown;
-    private float currentUltiCharge;
+    private float currentUltiCharge = 1;
 
     [SerializeField]
     private Image healthBar, ultiBar;
