@@ -16,9 +16,10 @@ public class ShipPlaytimeStatue : MonoBehaviour
     public Weapon weapon;
 
     private float currentCooldown;
+    private float currentUltiCharge;
 
     [SerializeField]
-    private Image healthBar = default;
+    private Image healthBar, ultiBar;
 
     float invulnerabilityLeft = 0;
 
@@ -44,31 +45,41 @@ public class ShipPlaytimeStatue : MonoBehaviour
         }
     }
 
-    public bool TakeDamage(float dmg, bool isPlayerProjectile)
+    public bool TakeDamage(float dmg, bool isEnemyProjectile)
     {
-        if (!isAlly && isPlayerProjectile != isPlayer && invulnerabilityLeft <= 0)
+        if (!isAlly && isEnemyProjectile == isPlayer && invulnerabilityLeft <= 0)
         {
             if(isPlayer)
             {
                 invulnerabilityLeft = 2;
             }
-
-            health -= dmg;
-            if (health <= 0)
+            if (health > 0)
             {
-                Die();
-            }
-            if (healthBar != null)
-            {
-                healthBar.fillAmount = health / maxHealth;
+                health -= dmg;
+                if (health <= 0)
+                {
+                    Die();
+                }
+                if (healthBar != null)
+                {
+                    healthBar.fillAmount = health / maxHealth;
+                }
             }
             return true;
         }
-        return isAlly;
+        else if(isAlly)
+        {
+            return isEnemyProjectile;
+        }
+        else
+        {
+            return false;
+        }
     }
 
     private void Die()
     {
+        GetComponent<Animator>().Play("Explosion");
         if (isPlayer)
         {
             //T_ScoreManager.instance.EndGame();
@@ -76,8 +87,16 @@ public class ShipPlaytimeStatue : MonoBehaviour
         else
         {
             //T_ScoreManager.instance.AddScore(baseShip.score, baseShip.difficultyScore);
-            gameObject.SetActive(false);
+            if(baseShip.dropOnDeath != null)
+            {
+                Instantiate(baseShip.dropOnDeath, transform.position, Quaternion.identity, transform.parent);
+            }
         }
+    }
+
+    private void DisableObject()
+    {
+        gameObject.SetActive(false);
     }
 
     public void TryToShoot()
@@ -92,5 +111,26 @@ public class ShipPlaytimeStatue : MonoBehaviour
     public bool IsCooldownReady()
     {
         return (currentCooldown >= weapon.recoveryTime);
+    }
+
+    public void AddUltiCharge(float value)
+    {
+        currentUltiCharge += value;
+        if(currentUltiCharge > 1)
+        {
+            currentUltiCharge = 1;
+        }
+        ultiBar.fillAmount = currentUltiCharge;
+    }
+
+    public bool CanUseUlti()
+    {
+        return currentUltiCharge == 1;
+    }
+
+    public void UseUlti()
+    {
+        currentUltiCharge = 0;
+        ultiBar.fillAmount = currentUltiCharge;
     }
 }
