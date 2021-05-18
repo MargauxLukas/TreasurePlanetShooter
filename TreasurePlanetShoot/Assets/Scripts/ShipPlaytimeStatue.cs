@@ -82,13 +82,13 @@ public class ShipPlaytimeStatue : MonoBehaviour
     private void Die()
     {
         GetComponent<Animator>().Play("Explosion");
+        currentCooldown = -99;
         if (isPlayer)
         {
-            //T_ScoreManager.instance.EndGame();
+            UIManager.instance.LoseLevel();
         }
         else
         {
-            //T_ScoreManager.instance.AddScore(baseShip.score, baseShip.difficultyScore);
             if(baseShip.dropOnDeath != null)
             {
                 Instantiate(baseShip.dropOnDeath, transform.position, Quaternion.identity, transform.parent);

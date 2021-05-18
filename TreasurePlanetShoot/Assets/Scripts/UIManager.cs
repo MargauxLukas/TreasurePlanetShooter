@@ -15,4 +15,9 @@ public class UIManager : MonoBehaviour
     {
         Debug.Log("EndGame");
     }
+
+    public void LoseLevel()
+    {
+
+    }
 }
