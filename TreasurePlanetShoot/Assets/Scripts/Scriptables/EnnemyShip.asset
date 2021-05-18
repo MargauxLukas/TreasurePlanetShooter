@@ -15,9 +15,9 @@ MonoBehaviour:
   nom: Ennemy
   shipSprite: {fileID: 21300000, guid: d52fe60d72af8194e94c26bc9eea683e, type: 3}
   hitPoints: 1
-  weapon: {fileID: 11400000, guid: 8903af75065b01749a6db144210d4db4, type: 2}
+  weapon: {fileID: 11400000, guid: 6aa27ba4b47a8414abdeb6020442b2fd, type: 2}
   speed: 3
   dropOnDeath: {fileID: 7088004812870285432, guid: 8d804a3500edb004997ceb78ddeadd8a, type: 3}
   wayPoints:
-  - {x: 0, y: 0}
+  - {x: 0, y: 2}
   - {x: 0, y: -2}

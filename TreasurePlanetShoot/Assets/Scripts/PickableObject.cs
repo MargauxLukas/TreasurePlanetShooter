@@ -4,6 +4,9 @@ using UnityEngine;
 
 public class PickableObject : MonoBehaviour
 {
+    [SerializeField]
+    private AudioSource audioSource;
+
     protected virtual void ApplyEffect(ShipPlaytimeStatue ship)
     {
         Debug.Log("Collected !");
@@ -14,6 +17,7 @@ public class PickableObject : MonoBehaviour
         if (collision.GetComponent<ShipPlaytimeStatue>() != null && collision.GetComponent<ShipPlaytimeStatue>().isPlayer && !collision.GetComponent<ShipPlaytimeStatue>().isAlly)
         {
             ApplyEffect(collision.GetComponent<ShipPlaytimeStatue>());
+            audioSource.Play();
             gameObject.SetActive(false);
         }
     }

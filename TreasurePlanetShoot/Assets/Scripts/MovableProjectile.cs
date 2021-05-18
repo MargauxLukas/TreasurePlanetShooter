@@ -28,7 +28,7 @@ public class MovableProjectile : MonoBehaviour
         direction = lazerDirection;
         speed = newWeapon.projectileSpeed;
 
-        if (shooter.isPlayer && shooter.isAlly)
+        if (shooter.isPlayer && !shooter.isAlly)
         {
             transform.position = shooter.gameObject.GetComponent<ShipController>().canon.transform.position;
         }

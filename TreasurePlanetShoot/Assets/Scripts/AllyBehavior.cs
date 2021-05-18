@@ -28,6 +28,6 @@ public class AllyBehavior : MonoBehaviour
         statue.TryToShoot();
 
         transform.RotateAround(player.position + offset, new Vector3(0, 0, 1), rotationSpeed * Time.deltaTime);
-        transform.right = new Vector3(0, 1, 0);
+        transform.right = new Vector3(1, 0, 0);
     }
 }
