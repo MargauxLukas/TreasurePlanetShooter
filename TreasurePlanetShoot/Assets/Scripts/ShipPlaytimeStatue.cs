@@ -31,7 +31,6 @@ public class ShipPlaytimeStatue : MonoBehaviour
 
     public void ResetValue()
     {
-        GetComponent<SpriteRenderer>().sprite = baseShip.shipSprite;
         maxHealth = baseShip.hitPoints;
         health = maxHealth;
         weapon = baseShip.weapon;
