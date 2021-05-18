@@ -7,6 +7,9 @@ public class AllyBehavior : MonoBehaviour
     Transform player;
 
     [SerializeField]
+    private Vector3 offset;
+
+    [SerializeField]
     private float rotationSpeed = 10;
 
     [SerializeField]
@@ -24,7 +27,7 @@ public class AllyBehavior : MonoBehaviour
     {
         statue.TryToShoot();
 
-        transform.RotateAround(player.position, new Vector3(0, 0, 1), rotationSpeed * Time.deltaTime);
+        transform.RotateAround(player.position + offset, new Vector3(0, 0, 1), rotationSpeed * Time.deltaTime);
         transform.right = new Vector3(0, 1, 0);
     }
 }

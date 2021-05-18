@@ -14,18 +14,16 @@ public class EnemyBehavior : MonoBehaviour
 
     private Vector3 localPos = Vector3.zero, direction = Vector3.zero, nextTarget = Vector3.zero;
 
-    private void OnEnable()
+    private void Start()
     {
         SetEnnemy(playtimeStatue.baseShip);
     }
 
     public void SetEnnemy(Ship newStatue)
     {
-        GetComponent<SpriteRenderer>().sprite = newStatue.shipSprite;
         baseStatue = newStatue;
         playtimeStatue.baseShip = newStatue;
         ShipReset();
-        transform.up = new Vector3(-1, 0, 0);
     }
 
     public void ShipReset()

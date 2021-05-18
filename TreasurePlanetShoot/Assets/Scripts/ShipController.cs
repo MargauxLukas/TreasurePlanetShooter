@@ -7,8 +7,7 @@ public class ShipController : MonoBehaviour
     [SerializeField]
     private float acceleration = 0.02f, maxSpeed = .1f;
 
-    [SerializeField]
-    private GameObject canon;
+    public GameObject canon;
 
     private Vector2 newShotDirection;
     private Vector3 moveDirection, inertieDirection, nextPosition;
@@ -58,7 +57,7 @@ public class ShipController : MonoBehaviour
     private void Update()
     {
         newShotDirection = (cam.ScreenToWorldPoint(Input.mousePosition) - transform.position).normalized;
-        if(Vector2.Angle(newShotDirection, transform.up) < 75 && Vector2.Angle(newShotDirection, transform.up) > -75)
+        if(Vector2.Angle(newShotDirection, transform.right) < 75 && Vector2.Angle(newShotDirection, transform.right) > -75)
         {
             currentStatue.shotDirection = newShotDirection;
             canon.transform.up = newShotDirection;

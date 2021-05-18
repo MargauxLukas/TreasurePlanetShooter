@@ -5,6 +5,7 @@ using UnityEngine.UI;
 
 public class ShipPlaytimeStatue : MonoBehaviour
 {
+    [SerializeField]
     private float health, maxHealth = 50;
     public bool isPlayer;
     public bool isAlly;
@@ -30,6 +31,7 @@ public class ShipPlaytimeStatue : MonoBehaviour
 
     public void ResetValue()
     {
+        GetComponent<SpriteRenderer>().sprite = baseShip.shipSprite;
         maxHealth = baseShip.hitPoints;
         health = maxHealth;
         weapon = baseShip.weapon;
