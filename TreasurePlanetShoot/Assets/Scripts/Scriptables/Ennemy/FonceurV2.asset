@@ -10,14 +10,14 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: e935e88d4a61e8047b3171c597825aae, type: 3}
-  m_Name: Fonceur 1
+  m_Name: FonceurV2
   m_EditorClassIdentifier: 
   nom: Fonceur2
   shipSprite: {fileID: 21300000, guid: 099687c6d0b556f4b97f1eee78b7fbe9, type: 3}
-  hitPoints: 1
+  hitPoints: 3
   weapon: {fileID: 11400000, guid: 03b3be2d78e97eb47ab5019bfeab07e8, type: 2}
   speed: 3
-  dropOnDeath: {fileID: 0}
+  dropOnDeath: {fileID: 7088004812870285432, guid: 8d804a3500edb004997ceb78ddeadd8a, type: 3}
   wayPoints:
   - {x: 0, y: 0}
   - {x: -15, y: 0}
