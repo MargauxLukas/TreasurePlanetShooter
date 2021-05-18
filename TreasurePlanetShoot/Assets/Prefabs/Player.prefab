@@ -272,8 +272,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6087d58db92648a4c8f82fae3f6aaae8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  acceleration: 0.05
-  maxSpeed: 0.2
+  acceleration: 0.4
+  maxSpeed: 0.1
   canon: {fileID: 512681269601546933}
   cam: {fileID: 0}
   currentStatue: {fileID: 512681269303350529}
