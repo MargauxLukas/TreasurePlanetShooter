@@ -14,7 +14,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   nom: DoubleFonceurZigZag2
   shipSprite: {fileID: 21300000, guid: 099687c6d0b556f4b97f1eee78b7fbe9, type: 3}
-  hitPoints: 1
+  hitPoints: 3
   weapon: {fileID: 11400000, guid: ece6f94bf1e618c45b43e1977cc62996, type: 2}
   speed: 3
   dropOnDeath: {fileID: 0}
