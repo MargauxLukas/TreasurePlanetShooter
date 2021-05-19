@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class UIManager : MonoBehaviour
 {
@@ -13,7 +14,7 @@ public class UIManager : MonoBehaviour
 
     public void LoadLevel(int lvlInt)
     {
-        //Load la scene du niveau
+        SceneManager.LoadScene(lvlInt);
     }
 
     public void EndLevel()
