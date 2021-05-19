@@ -11,6 +11,11 @@ public class UIManager : MonoBehaviour
         instance = this;
     }
 
+    public void LoadLevel(int lvlInt)
+    {
+        //Load la scene du niveau
+    }
+
     public void EndLevel()
     {
         Debug.Log("EndGame");
