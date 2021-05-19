@@ -96,6 +96,7 @@ public class ShipPlaytimeStatue : MonoBehaviour
         }
     }
 
+    //Appelé lors d'un Event d'animation
     private void DisableObject()
     {
         gameObject.SetActive(false);
