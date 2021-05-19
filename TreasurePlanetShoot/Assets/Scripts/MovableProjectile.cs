@@ -55,7 +55,7 @@ public class MovableProjectile : MonoBehaviour
     {
         transform.position += direction * speed * Time.fixedDeltaTime;
 
-        if (transform.position.x < -8.6f || transform.position.x > 8.6f || transform.position.y < -4.6f || transform.position.y > 4.6f)
+        if (transform.position.x < -8.6f || transform.position.x > 8.6f || transform.position.y < -4.8f || transform.position.y > 4.8f)
         {
             DestroyLazer();
         }
