@@ -23067,6 +23067,10 @@ PrefabInstance:
       propertyPath: m_IsActive
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 4579538798603176635, guid: 7131cfc1cc67d234db408f5de3987d09, type: 3}
+      propertyPath: m_IsActive
+      value: 0
+      objectReference: {fileID: 0}
     - target: {fileID: 5807487829145579652, guid: 7131cfc1cc67d234db408f5de3987d09, type: 3}
       propertyPath: m_Name
       value: Canvas
@@ -23247,6 +23251,17 @@ GameObject:
   m_CorrespondingSourceObject: {fileID: 277919778526633131, guid: 7131cfc1cc67d234db408f5de3987d09, type: 3}
   m_PrefabInstance: {fileID: 399133293}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &399133296 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 511334941765683098, guid: 7131cfc1cc67d234db408f5de3987d09, type: 3}
+  m_PrefabInstance: {fileID: 399133293}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fe87c0e1cc204ed48ad3b37840f39efc, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &399806460
 GameObject:
   m_ObjectHideFlags: 0
@@ -101994,6 +102009,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   endLevelGo: {fileID: 399133294}
   loseLevelGo: {fileID: 399133295}
+  ulti: {fileID: 399133296}
 --- !u!114 &1758393139
 MonoBehaviour:
   m_ObjectHideFlags: 0

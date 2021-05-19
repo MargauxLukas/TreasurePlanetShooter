@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
     public GameObject endLevelGo;
     public GameObject loseLevelGo;
+    public Image ulti;
 
     void Awake()
     {
@@ -27,5 +29,15 @@ public class UIManager : MonoBehaviour
     public void LoseLevel()
     {
         loseLevelGo.SetActive(true);
+    }
+
+    public void UltiUp()
+    {
+        ulti.gameObject.SetActive(true);
+    }
+
+    public void ResetUlti()
+    {
+        ulti.gameObject.SetActive(false);
     }
 }
