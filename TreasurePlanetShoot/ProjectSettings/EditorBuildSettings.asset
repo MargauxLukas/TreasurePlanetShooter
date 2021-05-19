@@ -6,6 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/_Scenes/MenuScene.unity
+    guid: 641d40f58e931da47bdd921189f8b823
+  - enabled: 1
+    path: Assets/_Scenes/Timothe/ShooterLevel1.unity
+    guid: e940dcc3af013cd40aaa31c64f17aca6
+  - enabled: 1
+    path: Assets/_Scenes/Timothe/ShooterLevel2.unity
+    guid: 592bbf6224e8a2e4eab5eb6dc78e0f30
+  - enabled: 1
+    path: Assets/_Scenes/Timothe/ShooterLevel3.unity
+    guid: 9d4614baa295bbe43bcc1e4a7335ecff
   m_configObjects: {}
