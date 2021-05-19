@@ -118,6 +118,7 @@ public class ShipPlaytimeStatue : MonoBehaviour
         if(currentUltiCharge < 1 && currentUltiCharge+value >= 1)
         {
             GetComponent<Animator>().Play("UltiUp");
+            UIManager.instance.UltiUp();
         }
         currentUltiCharge += value;
         if(currentUltiCharge >= 1)
@@ -136,5 +137,6 @@ public class ShipPlaytimeStatue : MonoBehaviour
     {
         currentUltiCharge = 0;
         ultiBar.fillAmount = currentUltiCharge;
+        UIManager.instance.ResetUlti();
     }
 }
