@@ -6,7 +6,9 @@ using UnityEngine.SceneManagement;
 public class UIManager : MonoBehaviour
 {
     public static UIManager instance;
-    // Start is called before the first frame update
+    public GameObject endLevelGo;
+    public GameObject loseLevelGo;
+
     void Awake()
     {
         instance = this;
@@ -19,11 +21,11 @@ public class UIManager : MonoBehaviour
 
     public void EndLevel()
     {
-        Debug.Log("EndGame");
+        endLevelGo.SetActive(true);
     }
 
     public void LoseLevel()
     {
-
+        loseLevelGo.SetActive(true);
     }
 }
