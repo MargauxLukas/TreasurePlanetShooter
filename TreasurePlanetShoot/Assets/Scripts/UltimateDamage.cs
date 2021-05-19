@@ -46,7 +46,7 @@ public class UltimateDamage : MonoBehaviour
             foreach (ShipPlaytimeStatue ship in shipInZone)
             {
 
-                Debug.Log("Ship : " + ship.TakeDamage(5, false));
+                Debug.Log("Ship : " + ship.TakeDamage(10, false));
             }
         }
         else
