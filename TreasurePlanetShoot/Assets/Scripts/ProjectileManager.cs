@@ -75,6 +75,10 @@ public class ProjectileManager : MonoBehaviour
             }
 
             yield return new WaitForSeconds(shooter.weapon.burstDelay);
+            if(!shooter.IsAlive)
+            {
+                break;
+            }
         }
     }
 

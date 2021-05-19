@@ -96,6 +96,8 @@ public class ShipPlaytimeStatue : MonoBehaviour
         }
     }
 
+    public bool IsAlive => health > 0;
+
     //Appelé lors d'un Event d'animation
     private void DisableObject()
     {
