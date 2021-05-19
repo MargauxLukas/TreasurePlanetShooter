@@ -103,16 +103,11 @@ public class ShipPlaytimeStatue : MonoBehaviour
 
     public void TryToShoot()
     {
-        if (currentCooldown >= weapon.recoveryTime)
+        if (currentCooldown >= weapon.recoveryTime && health > 0)
         {
             ProjectileManager.Shoot(this);
             currentCooldown = 0;
         }
-    }
-
-    public bool IsCooldownReady()
-    {
-        return (currentCooldown >= weapon.recoveryTime);
     }
 
     public void AddUltiCharge(float value)
