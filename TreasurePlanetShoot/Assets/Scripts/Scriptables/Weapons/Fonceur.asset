@@ -13,7 +13,7 @@ MonoBehaviour:
   m_Name: Fonceur
   m_EditorClassIdentifier: 
   nom: Basique
-  projectileSprite: {fileID: 21300000, guid: 53c497402d637164f95b38226b9f412f, type: 3}
+  projectileSprite: {fileID: 21300000, guid: f102916c1d391844b94d1231d8c121ef, type: 3}
   recoveryTime: 2
   projectileSpeed: 15
   damage: 1

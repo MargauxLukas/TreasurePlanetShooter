@@ -17,6 +17,9 @@ TextureImporter:
   - first:
       213: -49130668184793455
     second: Explosion_4
+  - first:
+      213: -2330519403281856691
+    second: Explosion_5
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -108,11 +111,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 31
-        y: 148
+        y: 13
         width: 55
-        height: 55
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 342
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -129,11 +132,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 127
-        y: 140
+        y: 13
         width: 84
-        height: 82
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 342
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -150,11 +153,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 278
-        y: 120
+        y: 13
         width: 128
-        height: 128
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 342
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -171,11 +174,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 436
-        y: 105
+        y: 13
         width: 166
-        height: 167
-      alignment: 0
-      pivot: {x: 0, y: 0}
+        height: 342
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -192,11 +195,11 @@ TextureImporter:
       rect:
         serializedVersion: 2
         x: 649
-        y: 13
+        y: 15
         width: 344
         height: 342
-      alignment: 0
-      pivot: {x: 0, y: 0}
+      alignment: 7
+      pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -204,6 +207,27 @@ TextureImporter:
       bones: []
       spriteID: 19e8447eae3715ff0800000000000000
       internalID: -49130668184793455
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: Explosion_5
+      rect:
+        serializedVersion: 2
+        x: 11
+        y: 0
+        width: 1013
+        height: 368
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: d47ca3943f458afd0800000000000000
+      internalID: -2330519403281856691
       vertices: []
       indices: 
       edges: []
