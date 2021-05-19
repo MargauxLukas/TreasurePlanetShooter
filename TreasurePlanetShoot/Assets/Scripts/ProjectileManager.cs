@@ -35,7 +35,7 @@ public class ProjectileManager : MonoBehaviour
     [ContextMenu("Add Lazer")]
     public void AddLazerInScene()
     {
-        for(int i = 0; i < 10; i++)
+        for(int i = 0; i < 50; i++)
         {
             MovableProjectile newProjectile = Instantiate(projectilePrefab, new Vector3(10, 10, 0), Quaternion.identity, projectileStock.transform).GetComponent<MovableProjectile>();
             allProjectilesLocal.Add(newProjectile);
@@ -45,7 +45,7 @@ public class ProjectileManager : MonoBehaviour
     [ContextMenu("Remove Lazer")]
     public void RemoveLazerInScene()
     {
-        for (int i = 0; i < 10; i++)
+        for (int i = 0; i < 50; i++)
         {
             if (allProjectilesLocal.Count > 0)
             {
