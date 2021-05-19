@@ -41021,18 +41021,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: Level1
       objectReference: {fileID: 0}
-    - target: {fileID: 2295844399585054275, guid: a49b12434b3131c4c87a3ff815cbbd3c, type: 3}
-      propertyPath: baseShip
-      value: 
-      objectReference: {fileID: 11400000, guid: 34533e25e4f9e794592b7e8ea6f96597, type: 2}
-    - target: {fileID: 2295844399585054285, guid: a49b12434b3131c4c87a3ff815cbbd3c, type: 3}
-      propertyPath: m_Sprite
-      value: 
-      objectReference: {fileID: 21300000, guid: 59e92c12318397d44a9f3f6e94c0330b, type: 3}
-    - target: {fileID: 5192638556977156891, guid: a49b12434b3131c4c87a3ff815cbbd3c, type: 3}
-      propertyPath: m_LocalPosition.x
-      value: 59
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: a49b12434b3131c4c87a3ff815cbbd3c, type: 3}
 --- !u!1 &1812963708
