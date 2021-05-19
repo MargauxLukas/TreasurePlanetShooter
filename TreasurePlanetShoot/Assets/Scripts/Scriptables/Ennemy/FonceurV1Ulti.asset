@@ -13,11 +13,11 @@ MonoBehaviour:
   m_Name: FonceurV1Ulti
   m_EditorClassIdentifier: 
   nom: Fonceur
-  shipSprite: {fileID: 21300000, guid: d52fe60d72af8194e94c26bc9eea683e, type: 3}
+  shipSprite: {fileID: 21300000, guid: 59e92c12318397d44a9f3f6e94c0330b, type: 3}
   hitPoints: 2
   weapon: {fileID: 11400000, guid: 03b3be2d78e97eb47ab5019bfeab07e8, type: 2}
   speed: 1
-  dropOnDeath: {fileID: 0}
+  dropOnDeath: {fileID: 7088004812870285432, guid: 8d804a3500edb004997ceb78ddeadd8a, type: 3}
   wayPoints:
   - {x: 0, y: 0}
   - {x: -15, y: 0}
