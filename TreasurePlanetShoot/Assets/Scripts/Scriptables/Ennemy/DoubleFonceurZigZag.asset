@@ -17,7 +17,7 @@ MonoBehaviour:
   hitPoints: 3
   weapon: {fileID: 11400000, guid: ece6f94bf1e618c45b43e1977cc62996, type: 2}
   speed: 3
-  dropOnDeath: {fileID: 0}
+  dropOnDeath: {fileID: 7304122513724434964, guid: a636613f156a1304a9e6f0a07d84bbd0, type: 3}
   wayPoints:
   - {x: 0, y: 0}
   - {x: 0, y: 4}
