@@ -18,8 +18,6 @@ public class PickableObject : MonoBehaviour
         {
             ApplyEffect(collision.GetComponent<ShipPlaytimeStatue>());
             audioSource.Play();
-            Debug.Log("Allo ?");
-            //gameObject.SetActive(false);
             GetComponent<SpriteRenderer>().enabled = false;
             GetComponent<BoxCollider2D>().enabled = false;
         }
